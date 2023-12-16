@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conf Bs As</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="text/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/codoacodo.png" alt="logo de codo a codo">
+            <h2>Conf Bs As</h2>
+        </div>
+        <input type="checkbox" id="check">
+        <label for="check" class="mostrar-menu">&#8801</label>
+        <nav class="menu">
+            <a class="btn" href="#conferencia">La conferencia</a>
+            <a class="btn" href="#oradores">Los oradores</a>
+            <a class="btn" href="#lugar-y-fecha">El lugar y fecha</a>
+            <a class="btn" href="#conviertete-en-orador">Conviértete en orador</a>
+            <a class="ticket" href="ticket.html">Comprar tickets</a>
+            <label for="check" class="cerrar-menu">&#215</label>
+        </nav>
+    </header>
+    <main>
+        <section class="banner" id="conferencia">
+            <div class="contenido-banner">
+                <h1>Conferencia Bs As</h1>
+                <p>Llega a Buenos Aires la primera conferencia 
+                    internacional en la que participaran desde 
+                    jovenes emprendedores, hasta CEOs de grandes 
+                    empresas multinacionales. Que esperas para asistir,
+                    o quiza ser tu mismo uno de los oradores.</p>
+                <div class="opciones">
+                    <a class="opciones-orador" href="#conviertete-en-orador">Quiero ser orador</a>
+                    <a class="opciones-ticket" href="ticket.html" class="comprar-ticket">Comprar tickets</a>
+                </div>
+            </div>
+        </section>
+        <div class="titulo-oradores" id="oradores">
+            <h5>CONOCE A LOS</h5>
+            <h2>ORADORES</h2>
+        </div>
+        <section class="oradores">
+            <div class="oradores-cuadro">
+                <img src="assets/img/Linus-Torvald-940x660.jpg" alt="linus-torveld-imagen">
+                <h4><p id="linux">Linux</p>Linus Torvalds</h4>
+                <p>Ingeniero de Software conocido por 
+                    iniciar y mantener el desarrollo del sistema
+                    operativo Linux. Tambien a desarrollado el 
+                    software de control de versiones Git.
+                </p>
+            </div>
+            <div class="oradores-cuadro">
+                <img src="assets/img/bill.jpg" alt="bill-gates-imagen">
+                <h4><p id="microsoft">Microsoft</p>Bill Gates</h4>
+                <p>Magnate empresarial, cofundador de Microsoft
+                    junto a su amigo Paul Allen. Fue uno de los
+                    principales empresarios de la revolución de las 
+                    microcomputadoras de las décadas de 1970 y 1980.
+                </p>
+            </div>
+            <div class="oradores-cuadro">
+                <img src="assets/img/Steve-Wozniak-940x660.jpg" alt="steve-wozniak-imagen">
+                <h4><p id="apple">Apple</p>Steve Wozniak</h4>
+                <p>Ingeniero de computadoras y cofundador de Apple junto
+                    a Steve Jobs en 1976. Sus trabajos entre 1970 y 1980
+                    son considerados pioneros de la revolucion de las
+                    computadoras personales.
+                </p>
+            </div>
+        </section>
+        <section class="BsAs" id="lugar-y-fecha">
+            <img src="assets/img/puente de la mujer.jpg" alt="puente de la mujer">
+            <div class="descripcion">
+                <h2>Buenos Aires</h2>
+                <p>Buenos Aires es la gran capital cosmopolita de Argentina. 
+                    Su centro es la Plaza de Mayo, rodeada de imponentes 
+                    edificios del siglo XIX, incluida la Casa Rosada, el icónico 
+                    palacio presidencial que tiene varios balcones. Entre otras 
+                    atracciones importantes, se incluyen el Teatro Colón, un lujoso 
+                    teatro de ópera de 1908 con cerca de 2,500 asientos, y el moderno 
+                    museo MALBA, que exhibe arte latinoamericano. </p>
+                <a class="btn-conoce-mas" href="#conoce-mas">Conocé más</a>
+            </div>
+        </section>
+        <div class="titulo-orador">
+            <h5>CONVIÉRTETE EN UN</h5>
+            <h2>ORADOR</h2>
+            <span>Anótate como orador para dar una charla. Cuéntanos de qué quieres hablar!</span>
+        </div>
+        <section class="form" id="conviertete-en-orador">
+            <form action="oradores" method="post">
+                <div class="nombre-apellido">
+                    <input type="text" id="nombre" name="nom" placeholder="Nombre" autocomplete="off">
+                    <input type="text" id="apellido" name="apell" placeholder="Apellido" autocomplete="off">
+                </div>
+                <textarea id="area-texto" name="area" placeholder="Sobre qué quieres hablar?"></textarea>
+                <span>Recuerda incluir un título para tu charla</span>
+                <input type="submit" id="enviar" value="Enviar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <nav>
+            <a href="#preguntas">Preguntas frecuentes</a>
+            <a href="#contacto">Contáctanos</a>
+            <a href="#prensa">Prensa</a>
+            <a href="#conferencias">Conferencias</a>
+            <a href="#terminos-y-condiciones">Términos y condiciones</a>
+            <a href="#privacidad">Privacidad</a>
+            <a href="#estudiantes">Estudiantes</a>
+        </nav>
+    </footer>
+</body>
+</html>

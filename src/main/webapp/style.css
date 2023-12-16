@@ -1,0 +1,662 @@
+/*GENERAL*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    & a{
+        text-decoration: none;
+    }
+    scroll-behavior: smooth;
+    scroll-padding-top: 5em;
+}
+/*VARIABLES*/
+:root {
+    --bgGrayColor: rgb(53,58,64);
+    --textColor: white;
+    --colorbtn: rgb(38,198,68);
+}
+/*------------------HEADER------------------*/
+header {
+    display: flex;
+    height: 5em;
+    padding: 0 8em;
+    gap: 5%;
+    background-color: var(--bgGrayColor);
+    color: var(--textColor);
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    /*-----------------Logo imagen-------------------*/
+    .logo{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        padding: 0 1.5em;
+        & h2{
+            width: 6em;
+        }
+        & img{
+            height: 5em;
+        }
+    }
+    .mostrar-menu,
+    .cerrar-menu{
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    .mostrar-menu{
+        order: 1;
+    }
+    /*-----------------menu nav-------------------*/
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        & a{
+            transition: 0.4s;
+            padding: 0 1.5em;
+        }
+        .btn{
+            color: rgb(153, 157, 160);
+        }
+        .ticket{
+            color: rgb(43, 167, 71);
+        }
+        
+    }
+    /*-----------------hovers-------------------*/
+    .primer-btn:hover,
+    .btn:hover,
+    .mostrar-menu:hover,
+    .cerrar-menu:hover{
+        color: var(--textColor);
+    }
+    .ticket:hover{
+        color: rgb(32, 224, 77);
+    }
+    #check{
+        display: none;
+    }
+    
+}
+
+/*------------------MAIN------------------*/
+main {
+    .banner{
+        display: flex;
+        padding: 0 50px;
+        background-image: url(assets/img/ba3.jpg);
+        height: 90vh;
+        background-size: cover;
+        background-position: center;
+        justify-content: end;
+        align-items: center;
+        
+        .contenido-banner{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            color: var(--textColor);
+            width: 60%;
+            height: auto;
+            margin-top: 15em;
+            justify-content: center;
+            text-align: right;
+            
+            & h1{
+                font-size: 40px;
+            }
+            & p{
+                font-size: 25px;
+                line-height: 40px;
+            }
+            .opciones{
+                .opciones-orador,
+                .opciones-ticket{
+                    color: var(--textColor);
+                    border: 1px solid;
+                    border-radius: 10px;
+                    padding: 20px;
+                    font-size: 25px;
+                    line-height: 90px;
+                }
+                .opciones-ticket{
+                    background: var(--colorbtn);
+                    margin-left: 2em;
+                }
+                .opciones-orador:hover,
+                .opciones-ticket:hover{
+                    color: cadetblue;
+                    transition: 0.4s;
+                }
+            }
+        }
+    }
+    /*-----------------filtro banner-------------------*/
+    .banner::before{
+        content: '';
+        background: rgba(56, 56, 56, 0.6);
+        position: absolute;
+        width: 100%;
+        height: 90vh;
+        left: 0;
+    }
+    /*-----------------oradores-------------------*/
+    .titulo-oradores{
+        display: block;
+        text-align: center;
+        padding-top: 2vh;
+        height: auto;
+        & h2{
+            font-size: 2em;
+            line-height: 45px;
+        }
+    }
+
+    .oradores{
+        display: flex;
+        justify-content: center;
+        flex-flow: wrap;
+        
+        .oradores-cuadro{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgb(223,223,223);
+            width: 40vh;
+            margin: 2em;
+            & img{
+                object-fit: cover;
+                height: 42vh;
+            }
+            & h4{
+                font-size: 1.5em;
+                line-height: 2em;
+                padding: 2px;
+                & p{
+                    font-size: 0.7em;
+                    padding: 3px;
+                    width: fit-content;
+                    border-radius: 8px;
+                }
+                #linux{
+                    border: 2px solid rgb(6, 6, 6);
+                }
+                #microsoft{
+                    color: var(--textColor);
+                    background-color: rgb(18, 79, 149);
+                    border: 2px solid rgb(18, 79, 149);
+                }
+                #apple{
+                    color: var(--textColor);
+                    background-color: rgb(0, 0, 0);
+                    border: 2px solid rgb(0, 0, 0);
+                }
+            }
+            & p{
+                line-height: 1.5em;
+                padding: 2px;
+            }
+        }
+    }
+
+    .BsAs{
+        display: flex;
+        background-color: rgb(53,58,64);
+        
+        & img{
+            height: 62vh;
+        }
+        .descripcion{
+            color: var(--textColor);
+            padding: 1em;
+            & h2{
+                font-size: 2em;
+            }
+            & p{
+                line-height: 2em;
+            }
+            .btn-conoce-mas{
+                padding: 0.8em;
+                color: var(--textColor);
+                border: 1.5px solid;
+                border-radius: 8px;
+                line-height: 4em;
+            }
+            .btn-conoce-mas:hover{
+                color: cadetblue;
+                transition: 0.4s;
+            }
+        }
+    }
+    
+    .titulo-orador{
+        display: block;
+        text-align: center;
+        padding-top: 2vh;
+        height: auto;
+        margin-bottom: 1em;
+        & h2{
+            font-size: 2em;
+            line-height: 45px;
+        }
+    }
+
+    .form{
+        display: flex;
+        height: auto;
+        justify-content: center;
+        & form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            .nombre-apellido{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 2em;
+                #nombre, #apellido{
+                    margin-top: 1em;
+                    margin-bottom: 1em;
+                    border: 1px solid rgb(223,223,223);
+                    border-radius: 7px;
+                    width: 100%;
+                    height: 100%;
+                    outline: none;
+                    font-size: 1.2em;
+                    text-indent: 1.2em;
+                }
+            }
+            #area-texto{
+                border: 1px solid rgb(223,223,223);
+                border-radius: 7px;
+                width: 100%;
+                height: 15vh;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                outline: none;
+                text-indent: 1em;
+                padding-top: 1em;
+                font-size: 1.2em;
+            }
+            #area-texto::placeholder{
+                font-size: 1.2em;
+            }
+            #enviar{
+                margin-top: 1em;
+                margin-bottom: 1em;
+                color: var(--textColor);
+                height: 8vh;
+                font-size: 1.3em;
+                border: none;
+                border-radius: 7px;
+                background-color: rgb(150, 201, 62);
+            }
+            #enviar:hover{
+                color: cadetblue;
+                cursor: pointer;
+                transition: 0.4s;
+            }
+        } 
+    }
+}
+
+/*------------------FOOTER------------------*/
+footer {
+    display: flex;
+    background: linear-gradient(to right,rgb(28, 56, 70), rgb(30, 79, 109));
+    width: 100%;
+    height: 6em;
+    & nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        
+        & a{
+            color: var(--textColor);
+            padding: 0 3em;
+            line-height: 1.5em;
+            text-align: center;
+            
+        }
+        & a:hover{
+            color: cadetblue;
+            transition: 0.4s;
+        }
+    }
+}
+
+/*-----------------MEDIA QUERIES HEADER-----------------*/
+@media(max-width: 822px) {
+    header {
+        .mostrar-menu,
+        .cerrar-menu{
+            display: block;
+            
+        }
+        .logo{
+            margin-left: -120px;
+        }
+        .mostrar-menu{
+            margin-right: -80px;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            background-color: var(--bgGrayColor);
+            right: -100%;
+            top: 0;
+            text-align: center;
+            padding: 100px 0px;
+            z-index: 100;
+            transition: 0.8s;
+            
+            & a{
+                display: block;
+                padding: 20px;
+            }
+            
+            .cerrar-menu{
+                position: absolute;
+                top: 40px;
+                right: 40px;
+            }
+            
+        }
+        #check:checked ~ .menu{
+            right: 0;
+        }
+    }
+    footer{
+        & nav{ 
+            & a{
+                color: var(--textColor);
+                padding: 0 1em;
+                line-height: 1em;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (min-width: 822px) and (max-width: 1075px){
+    header{
+        .logo{
+            margin-left: -120px;
+        }
+        .menu{
+            margin-right: -120px;
+        }
+    }
+}
+
+/*-----------------MEDIA QUERIES MAIN-------------------*/
+@media (min-width: 949px) and (max-width: 1209px){
+    main{     
+        .contenido-banner{
+            width: 70%;
+            & h1{
+                font-size: 35px;
+            }
+            & p{
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .opciones{
+                .opciones-orador,
+                .opciones-ticket{
+                    font-size: 20px;
+                    padding: 10px;
+                }
+            }
+        }
+        .BsAs{
+            flex-flow: wrap;
+            & img{
+                width: 100%;
+                height: auto;
+            }
+            .descripcion{
+                & h2{
+                    font-size: 1.7em;
+                    line-height: 1.3em;
+                }
+                & p{
+                    line-height: 1.5em;
+                }
+                .btn-conoce-mas{
+                    padding: 0.5em;
+                    line-height: 3.5em;
+                }
+                .btn-conoce-mas:hover{
+                    color: cadetblue;
+                    transition: 0.4s;
+                }
+            }
+        }
+        .form{
+            & form{
+                width: 70%;
+            }
+        }
+    }
+}
+@media (min-width: 678px) and (max-width: 949px){
+    main{
+        .banner{
+            display: flex;
+            .contenido-banner{
+                width: 70%;
+                & h1{
+                    font-size: 35px;
+                }
+                & p{
+                    font-size: 20px;
+                    line-height: 40px;
+                }
+                .opciones{
+                    .opciones-orador,
+                    .opciones-ticket{
+                        font-size: 20px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .BsAs{
+            flex-flow: wrap;
+            & img{
+                width: 100%;
+                height: auto;
+            }
+            .descripcion{
+                & h2{
+                    font-size: 1.7em;
+                    line-height: 1.3em;
+                }
+                & p{
+                    line-height: 1.5em;
+                }
+                .btn-conoce-mas{
+                    padding: 0.5em;
+                    line-height: 3.5em;
+                }
+                .btn-conoce-mas:hover{
+                    color: cadetblue;
+                    transition: 0.4s;
+                }
+            }
+        }
+        .form{
+            & form{
+                width: 70%;
+                
+            }
+        }
+    }
+}
+@media (max-width: 678px){
+    main{
+        .banner{
+            padding: 0 20px;
+            height: 75vh;
+            .contenido-banner{
+                width: 100%;
+                & h1{
+                    font-size: 25px;
+                }
+                & p{
+                    font-size: 15px;
+                    line-height: 30px;
+                }
+                .opciones{
+                    .opciones-orador,
+                    .opciones-ticket{
+                        font-size: 15px;
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+        .banner::before{
+            height: 75vh;
+        }
+        .titulo-oradores{
+            font-size: 0.8em;
+            line-height: 10px;
+        }
+        .oradores{
+            .oradores-cuadro{
+                & h4{
+                    font-size: 1.5em;
+                    line-height: 1.3em;
+                    padding: 2px;
+                }
+            }
+        }
+        .BsAs{
+            flex-flow: wrap;
+            & img{
+                width: 100%;
+                height: auto;
+            }
+            .descripcion{
+                & h2{
+                    font-size: 1.7em;
+                    line-height: 1.3em;
+                }
+                & p{
+                    line-height: 1.5em;
+                }
+                .btn-conoce-mas{
+                    padding: 0.5em;
+                    line-height: 3.5em;
+                }
+                .btn-conoce-mas:hover{
+                    color: cadetblue;
+                    transition: 0.4s;
+                }
+            }
+        }
+        .form{
+            & form{
+                width: 70%;
+                .nombre-apellido{
+                    #nombre, #apellido{
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                        font-size: 1em;
+                    }
+                }
+                #area-texto{
+                    text-indent: 0.5em;
+                    font-size: 1em;
+                }
+                #enviar{
+                    height: 5vh;
+                }
+            } 
+        }
+    }
+}
+@media (max-height: 680px){
+    main{
+        .banner{
+            height: 100vh;
+            .contenido-banner{
+                width: auto;
+                margin-top: 5em;
+            }
+        }
+        .banner::before{
+            height: 100vh;
+        }
+        .titulo-oradores{
+            font-size: 0.8em;
+            line-height: 15px;
+        }
+        .oradores{
+            .oradores-cuadro{
+                & h4{
+                    font-size: 1.5em;
+                    line-height: 1.3em;
+                    padding: 2px;
+                }
+            }
+        }
+        .BsAs{
+            flex-flow: wrap;
+            & img{
+                width: 100%;
+                height: auto;
+            }
+            .descripcion{
+                & h2{
+                    font-size: 1.7em;
+                    line-height: 1.3em;
+                }
+                & p{
+                    line-height: 1.5em;
+                }
+                .btn-conoce-mas{
+                    padding: 0.5em;
+                    line-height: 3.5em;
+                }
+                .btn-conoce-mas:hover{
+                    color: cadetblue;
+                    transition: 0.4s;
+                }
+            }
+        }
+        .form{
+            & form{
+                width: 70%;
+                .nombre-apellido{
+                    #nombre, #apellido{
+                        margin-top: 0.5em;
+                        margin-bottom: 0.5em;
+                        font-size: 1em;
+                    }
+                }
+                #area-texto{
+                    text-indent: 1em;
+                    font-size: 1em;
+                    height: 30vh;
+                }
+                #enviar{
+                    height: 10vh;
+                }
+            } 
+        }
+    }
+}
